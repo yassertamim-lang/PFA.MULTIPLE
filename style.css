@@ -1,0 +1,226 @@
+:root{
+	--bg1: #FFD3B6;
+	--bg2: #FFAAA5;
+	--accent1: #6DD3FF;
+	--accent2: #FFD36B;
+	--card: #FFFFFF;
+	--muted: #555;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	font-family: 'Comic Sans MS', 'Trebuchet MS', Arial, sans-serif;
+	background: linear-gradient(135deg,var(--bg1), var(--bg2));
+	color:#222;
+	padding:24px;
+}
+
+h1{
+	font-size:2.2rem;
+	margin:10px 0 18px 0;
+	color:#fff;
+	background: linear-gradient(90deg,#FF7A7A,#FFD36B);
+    font-weight:700;
+	padding:10px 22px;
+	border-radius:999px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+h2{
+    font-size:1.2rem;
+    margin:10px 0 24px 0;
+    color:#fff9f9;
+    background: linear-gradient(90deg,#6DD3FF,#FFD36B);
+    padding:6px 16px;
+    font-weight:400;
+    box-shadow: #7b2c72 0px 4px 12px;
+    border-radius:999px;
+    letter-spacing:2 px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+#gameArea{ 
+	width:100%;
+	color:#3f435a;
+	max-width:520px;
+	background: linear-gradient(180deg, rgba(244, 246, 247, 0.9), rgba(232, 234, 234, 0.85));
+	border-radius:16px;
+	padding:16px 20px 28px 20px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+#top{display:flex;justify-content:space-between;align-items:center;font-size:18px;margin-bottom:10px}
+#top > div:first-child{flex:1;margin-right:16px}
+#top div{background:linear-gradient(90deg,rgba(255,255,255,0.8),rgba(255,255,255,0.6));padding:8px 12px;border-radius:12px}
+
+.progress-bar{
+    width:100%;
+    height:24px;
+    background-color:rgb(255, 255, 255);
+    border-radius:12px;
+    margin-top:8px;
+    overflow:hidden;
+    border:2px solid rgba(255,255,255,0.7);
+}
+
+.progress-bar-fill{
+    height:100%;
+    width:0%;
+    transition:width 0.4s ease, background 0.5s ease;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:14px;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+
+#question{font-size:1.6rem;margin:8px 0 12px 0;color:#333}
+
+#answers{display:flex;flex-direction:column;align-items:center}
+#answers button{display:block;width:100%;max-width:360px;margin:8px 0;font-size:1.1rem;padding:12px 14px;border-radius:12px;background:linear-gradient(90deg,#FF9AA2,#FFB347);}
+#answers button:nth-child(2){background:linear-gradient(90deg,#cd0982,#7b2c72)}
+#answers button:nth-child(3){background:linear-gradient(90deg,#e2b307,#d3ae28)}
+#answers button:nth-child(4){background:linear-gradient(90deg,#0b64e2,#4f0aae)}
+
+#result{font-size:1.2rem;margin:12px 0;color:#222}
+
+
+.hidden{display:none}
+
+.signin-container, .signin-form {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 0 auto 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.signin-form h3 {
+    color: #333;
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border: 2px solid rgba(255,210,182,0.5);
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.9);
+    transition: border-color 0.3s;
+}
+
+.signin-form input:focus {
+    outline: none;
+    border-color: var(--accent1);
+    box-shadow: 0 0 0 3px rgba(109,211,255,0.1);
+}
+
+#btnSignIn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btnSignIn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(109,211,255,0.4);
+}
+
+#btnSignIn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #ff4757;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.welcome {
+    background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+    padding: 12px 18px;
+    border-radius: 25px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+#btnSignOut {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 12px;
+}
+
+#btnSignOut:hover {
+    background: linear-gradient(90deg, #ff5252, #ff6b6b);
+}
+
+.score-history {
+    background: rgba(255,255,255,0.7);
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width:420px){
+	h1{font-size:1.6rem}
+	.signin-container{min-width:220px;padding:14px}
+	#answers button{max-width:100%}
+}
+
+/* Animated background symbols (+ / * -) in soft red */
+body::before{
+	content: "";
+	position:fixed;
+	inset:0;
+	z-index:0;
+	pointer-events:none;
+	opacity:0.18;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><style>text{font-family:Arial,sans-serif;font-weight:800}</style><text x='6' y='44' font-size='44' fill='%23ff2b2b'>+ / * -</text><text x='6' y='110' font-size='44' fill='%23ff2b2b'>+ / * -</text><text x='6' y='176' font-size='44' fill='%23ff2b2b'>+ / * -</text></svg>");
+	background-repeat: repeat;
+	background-size: 200px 200px;
+	/* show symbols plainly on top of gradient */
+	mix-blend-mode: normal;
+	animation: moveSymbols 14s linear infinite;
+}
+
+@keyframes moveSymbols{
+	from{background-position: 0 0}
+	to{background-position: 600px 600px}
+}
+
+/* Ensure main UI sits above the animated background */
+.signin-container, #playerInfo, #gameArea, h1{
+	position:relative;
+	z-index:2;
+}
